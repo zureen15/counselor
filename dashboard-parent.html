@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Dashboard | Education Portal</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-book-open"></i>
+                <span>Education Portal</span>
+            </div>
+            <div class="user-menu">
+                <span id="user-name">Loading...</span>
+                <button id="logout-button" class="btn-logout">Sign Out</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard-content">
+        <div class="dashboard-container">
+            <h1>Parent Dashboard</h1>
+            
+            <div class="dashboard-cards">
+                <div class="dashboard-card">
+                    <h3 id="welcome-message">Welcome</h3>
+                    <p>This is your parent dashboard where you can monitor your child's progress.</p>
+                </div>
+                
+                <div class="dashboard-card">
+                    <h3>My Children</h3>
+                    <p>View your children's progress</p>
+                    <div class="card-stats">
+                        <div class="stat">
+                            <span class="stat-value">2</span>
+                            <span class="stat-label">Children</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">8</span>
+                            <span class="stat-label">Classes</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-card">
+                    <h3>Upcoming Events</h3>
+                    <p>Stay updated with school events</p>
+                    <ul class="action-list">
+                        <li><a href="#"><i class="fas fa-calendar-alt"></i> Parent-Teacher Meeting</a></li>
+                        <li><a href="#"><i class="fas fa-graduation-cap"></i> School Assembly</a></li>
+                        <li><a href="#"><i class="fas fa-trophy"></i> Sports Day</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script>
+        // Check if user has parent role
+        checkUserRole('parent');
+    </script>
+</body>
+</html>

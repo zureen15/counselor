@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard | Education Portal</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-book-open"></i>
+                <span>Education Portal</span>
+            </div>
+            <div class="user-menu">
+                <span id="user-name">Loading...</span>
+                <button id="logout-button" class="btn-logout">Sign Out</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard-content">
+        <div class="dashboard-container">
+            <h1>Teacher Dashboard</h1>
+            
+            <div class="dashboard-cards">
+                <div class="dashboard-card">
+                    <h3 id="welcome-message">Welcome</h3>
+                    <p>This is your teacher dashboard where you can manage your classes and students.</p>
+                </div>
+                
+                <div class="dashboard-card">
+                    <h3>My Classes</h3>
+                    <p>Manage your classes and lessons</p>
+                    <div class="card-stats">
+                        <div class="stat">
+                            <span class="stat-value">5</span>
+                            <span class="stat-label">Classes</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">128</span>
+                            <span class="stat-label">Students</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-card">
+                    <h3>Assignments</h3>
+                    <p>Create and grade assignments</p>
+                    <ul class="action-list">
+                        <li><a href="#"><i class="fas fa-plus-circle"></i> New Assignment</a></li>
+                        <li><a href="#"><i class="fas fa-clipboard-check"></i> Grade Submissions</a></li>
+                        <li><a href="#"><i class="fas fa-history"></i> Past Assignments</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script>
+        // Check if user has teacher role
+        checkUserRole('teacher');
+    </script>
+</body>
+</html>
